@@ -1,9 +1,11 @@
 import React from 'react';
+import Home from '../Home';
 
 const App = () =>{
   return(
     <div>
-      <div>Hello! this is React with Parcel</div>
+      <h1>woa</h1>
+     <Home />
     </div>
   );
 }
