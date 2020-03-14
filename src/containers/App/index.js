@@ -1,10 +1,13 @@
 import React from 'react';
 import Home from '../Home';
+import './style.scss';
 
 const App = () =>{
   return(
-    <div>
-      <h1>woa</h1>
+    <div className="app-component">
+      <div className="app-header">
+        <div className="app-header-title">Money management website</div>
+      </div>
      <Home />
     </div>
   );

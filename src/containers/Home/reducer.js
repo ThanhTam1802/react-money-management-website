@@ -1,4 +1,6 @@
-export default (state = {nan: 1}, action) => {
+const initialState = {}
+
+export default (state = initialState, action) => {
   switch (action.type) {
    case 'ADD_DATE':
     return {
@@ -6,5 +8,5 @@ export default (state = {nan: 1}, action) => {
     }
    default:
     return state
-  }
+  };
  }
