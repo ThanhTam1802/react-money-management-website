@@ -1,5 +1,7 @@
+# Folder
 /node_modules
 /.cache
 /dist
 
+# File
 yarn.lock
