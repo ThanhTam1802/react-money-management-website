@@ -7,10 +7,15 @@
   width: 100%;
   height: 100vh;
   background-color: white;
+
+  animation-name: example;
+  animation-duration: 4s;
+
   .modal-content {
     height: 100%;
+    width: 100%;
 
-    .close-modal-button{
+    .close-modal-button {
       background-color: transparent;
       border: none;
       outline: none;
@@ -19,9 +24,35 @@
       top: 0;
       right: 0;
       cursor: pointer;
-      &:active{
+      &:active {
         opacity: 0.5;
       }
     }
+
+    .modal-title {
+      text-align: center;
+      padding: 1rem;
+      font-size: 24px;
+    }
+
+    .break-line {
+      height: 1px;
+      background-color: rgba(90, 90, 90, 0.4);
+      width: 100%;
+    }
   }
 }
+
+// Animation
+.show-modal-animation {
+  animation: show 0.5s;
+}
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+

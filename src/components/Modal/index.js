@@ -7,16 +7,14 @@ const Modal = (props) => {
     return null;
   }
   return (
-    <div className="modal-component">
+    <div className={`modal-component ${onShow ? 'show-modal-animation' : ''}`}>
       <div className="modal-content">
-        
-        <button className="close-modal-button" onClick={() => close()}>
-          O
-        </button>
+        <button className="close-modal-button" onClick={() => close()}>O</button>
 
         <div className="modal-title">
           <div>{props.title}</div>
         </div>
+        <div className="break-line" />
         {props.children}
       </div>
     </div>
