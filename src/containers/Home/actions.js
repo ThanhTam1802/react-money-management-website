@@ -1,4 +1,4 @@
-export default addDate = () =>({
-  type: 'ADD_DATE',
-  data: 'data'
+export const updateUser = (data) => ({
+  type: 'UPDATE_USER',
+  data
 })
