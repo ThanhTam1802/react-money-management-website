@@ -3,16 +3,17 @@
   margin: 0 auto;
   height: 100vh;
   background: aliceblue;
+  position: relative;
 
   .app-header {
     background: #b2fefa;
     background: -webkit-linear-gradient(to left, #0ed2f7, #b2fefa);
     background: linear-gradient(to left, #0ed2f7, #b2fefa);
-    padding: 1.5rem 2rem;
+    padding: 0.5rem 2rem;
     border-radius: 0 0 15px 15px;
 
     .app-header-title {
-      color: white;
+      color: aliceblue;
       text-align: center;
       font-size: large;
       font-weight: bold;
