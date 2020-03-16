@@ -3,14 +3,15 @@ import './style.scss';
 
 const Modal = (props) => {
   const { onShow, close } = props;
+
   if (!onShow) {
     return null;
-  }
-  return (
-    <div className={`modal-component ${onShow ? 'show-modal-animation' : ''}`}>
-      <div className="modal-content">
-        <button className="close-modal-button" onClick={() => close()}>O</button>
+  };
 
+  return (
+    <div className={`modal-component ${onShow && 'show-modal-animation'}`}>
+      <div className="modal-content">
+        <button className="close-modal-button" onClick={() => close()}>X</button>
         <div className="modal-title">
           <div>{props.title}</div>
         </div>

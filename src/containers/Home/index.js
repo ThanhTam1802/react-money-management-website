@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Form from '../../components/Form';
+import TextEditor from '../../components/TextEditor';
 import Modal from '../../components/Modal';
 
 const Home = () => {
@@ -17,8 +18,8 @@ const Home = () => {
       </div>
       <button onClick={handleOpenModal}>Open Modal</button>
 
-      <Modal onShow={modal} title={"Hello"} close={handleCloseModal}>
-        <Form />
+      <Modal onShow={modal} title={"This is modal"} close={handleCloseModal}>
+        <TextEditor />
       </Modal>
     </div>
   );
