@@ -18,7 +18,7 @@ const Home = () => {
       </div>
       <button onClick={handleOpenModal}>Open Modal</button>
 
-      <Modal onShow={modal} title={"This is modal"} close={handleCloseModal}>
+      <Modal onShow={modal} title={"This is modal"} onClose={handleCloseModal}>
         <TextEditor />
       </Modal>
     </div>

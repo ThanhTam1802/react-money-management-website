@@ -1,17 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './style.scss';
 
 const Modal = (props) => {
-  const { onShow, close } = props;
+  const { onShow, onClose } = props;
+  const [isOpen, setIsOpen] = useState(true);
 
-  if (!onShow) {
-    return null;
+  const handleOnClose = () => {
+    setIsOpen(false);
+    setTimeout(() => { 
+      onClose() 
+      setIsOpen(true);
+    }, 290);
   };
 
+  if (!onShow) { return null };
+
   return (
-    <div className={`modal-component ${onShow && 'show-modal-animation'}`}>
+    <div className={`modal-component ${isOpen ? 'fade-in-animation' : 'fade-out-animation'}`}>
       <div className="modal-content">
-        <button className="close-modal-button" onClick={() => close()}>X</button>
+        <button className="close-modal-button" onClick={handleOnClose}>X</button>
         <div className="modal-title">
           <div>{props.title}</div>
         </div>
