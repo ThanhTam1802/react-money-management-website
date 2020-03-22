@@ -5,20 +5,18 @@ import Modal from '../../components/Modal';
 
 const Home = () => {
   const [modal, setModal] = useState(false);
-  const handleCloseModal = () => {
-    setModal(false);
-  };
-  const handleOpenModal = () => {
-    setModal(true);
-  };
   return (
     <div>
       <div style={{ textAlign: "center" }}>
         Hello! this is React with Parcel
       </div>
-      <button onClick={handleOpenModal}>Open Modal</button>
+      <button onClick={() => { setModal(true) }}>
+        Open Modal
+      </button>
 
-      <Modal onShow={modal} title={"This is modal"} onClose={handleCloseModal}>
+      <Modal title={"This is modal"}
+        onShow={modal}
+        onClose={() => { setModal(false) }}>
         <TextEditor />
       </Modal>
     </div>
